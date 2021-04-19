@@ -7,35 +7,27 @@ This is intended as a simple exercise to learn how to use [std::filesystem](http
 The idea is to implement a program that can transform this:
 
 ```console
-$ tree data/
-data/
+tree ./data/
+./data/
 ├── bar
 └── foo
-    ├── hello
-    └── world
-
-1 directory, 3 files
-$ cat data/foo/hello
-Hello
-$ cat data/foo/world
-World
+    ├── baz
+    └── test
+        ├── hello
+        └── world
 ```
 
 into this:
 
 ```console
-$ tree data/
-data/
-├── foo
-└── bar
-    ├── hello
-    └── world
-
-1 directory, 3 files
-$ cat data/foo/hello
-World
-$ cat data/foo/world
-Hello
+tree ./data/
+./data/
+├── bar
+│   ├── baz
+│   │   ├── hello
+│   │   └── world
+│   └── test
+└── foo
 ```
 
 ## Quick Start
@@ -44,8 +36,20 @@ Hello
 $ make
 $ ./generator ./data/
 $ tree ./data/
-...
+./data/
+├── bar
+└── foo
+    ├── baz
+    └── test
+        ├── hello
+        └── world
 $ ./inverter ./data/
 $ tree ./data/
-...
+./data/
+├── bar
+│   ├── baz
+│   │   ├── hello
+│   │   └── world
+│   └── test
+└── foo
 ```
