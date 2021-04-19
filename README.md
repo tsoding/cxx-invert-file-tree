@@ -1,6 +1,6 @@
 # Invert File Tree in C++
 
-This is like [Inverting Binary Tree](https://twitter.com/mxcl/status/608682016205344768), but instead of the Binary Tree it's File Tree.
+This is like [Inverting Binary Tree](https://twitter.com/mxcl/status/608682016205344768), but instead of the Binary Tree it's a File Tree.
 
 This is intended as a simple exercise to learn how to use [std::filesystem](https://en.cppreference.com/w/cpp/filesystem)
 
